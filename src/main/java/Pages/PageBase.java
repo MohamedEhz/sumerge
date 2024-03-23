@@ -38,23 +38,6 @@ public class PageBase {
             js.executeScript("window.scrollBy(0," + pixels + ")");
         }
     }
-//    public void switchToNewPage(){
-//        String firstTab = null;
-//        String secondTab = driver.getWindowHandle();
-//        for (String handle : driver.getWindowHandles()) {
-//            if (!handle.equals(firstTab)) {
-//                secondTab = handle;
-//                break;
-//            }
-//        }
-//
-//        // Switch to the second tab
-//        driver.switchTo().window(secondTab);
-//        System.out.println("The secound tab is opened");
-//
-//        // Switch back to the first tab
-//        driver.switchTo().window(firstTab);
-//    }
 public void switchToNewPage() {
     // Get the current window handle
     String mainWindowHandle = driver.getWindowHandle();

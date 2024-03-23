@@ -1,10 +1,7 @@
 import Pages.BookingPage;
 import Pages.CheckOutPage;
-import Pages.PageBase;
 import Pages.TolipHotelPage;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class Tests extends TestBase{
@@ -12,8 +9,6 @@ public class Tests extends TestBase{
     TestData testData;
     TolipHotelPage tolipHotelPage;
     CheckOutPage checkOutPage;
-    PageBase pageBase;
-
     @Test
 public void test(){
         bookingPage = new BookingPage(driver);
@@ -41,7 +36,6 @@ public void test(){
         //Assert Check-in and Check-out is saved correctly
         Assert.assertEquals(checkOutPage.getSavedCheckInValue(),"Mon, Apr 1, 2024");
         Assert.assertEquals(checkOutPage.getSavedCheckOutValue(),"Sun, Apr 14, 2024");
-
     }
 
 }
